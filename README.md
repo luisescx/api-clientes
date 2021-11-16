@@ -6,8 +6,7 @@
 
 <ul>
   <li>Clonar o projeto e no diretório raiz executar o comando <strong>npm install</strong></li>
-  <li>No diretório raiz, executar o <strong>comando docker-compose up</strong> (certificar que estão instalados o Docker e docker-compose)</li>
-  <li>No diretório raiz, executar o <strong>comando docker-compose up</strong> (Caso dê conflito com a porta 5432, pare o serviço do postgres usando o comando <strong>sudo service postgresql stop</strong> no Linux e <strong>net stop postgresql-x64-9.3</strong> no Windows, e executar de novo <strong>comando docker-compose up</strong>)</li>
+  <li>No diretório raiz, executar o comando <strong>docker-compose up</strong> (Caso dê conflito com a porta 5432, pare o serviço do postgres usando o comando <strong>sudo service postgresql stop</strong> no Linux e <strong>net stop postgresql-x64-9.3</strong> no Windows, e executar de novo o comando <strong>docker-compose up</strong>)</li>
   <li>Com o <strong>comando docker-compose up</strong> rodando, em outro terminal rodar as migrations utilizando o comando <strong>npx typeorm migration:run</strong></li>
   <li>Rodar o projeto com o comando <strong>npm run dev</strong></li>
   <li>Para acessar o swagger com as informações das rotas <link>http://localhost:3333/api-docs/</link> </li>
