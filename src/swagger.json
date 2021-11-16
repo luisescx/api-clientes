@@ -1,0 +1,198 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "api-integration documentation",
+    "description": "Client Api",
+    "version": "1.0.0"
+  },
+  "paths": {
+    "/token": {
+      "post": {
+        "tags": ["Token"],
+        "summary": "Generate a Token",
+        "description": "Generate a Token",
+        "parameters": [
+          {
+            "name": "bearer-access-token",
+            "in": "header",
+            "required": true
+          }
+        ],
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "client": {
+                    "type": "string"
+                  }
+                },
+                "example": {
+                  "client": "CLIENTE_VAREJAO"
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": "Created"
+          },
+          "400": {
+            "description": "Cliente não existe!"
+          }
+        }
+      }
+    },
+    "/contacts/createContact": {
+      "post": {
+        "tags": ["Contact"],
+        "summary": "Create a Contact",
+        "description": "Create a new Contact",
+        "parameters": [
+          {
+            "name": "bearer-access-token",
+            "in": "header",
+            "required": true
+          }
+        ],
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "nome": {
+                    "type": "string"
+                  },
+                  "celular": {
+                    "type": "string"
+                  }
+                },
+                "example": {
+                  "nome": "luiescx",
+                  "celular": "554199001234"
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": "Created"
+          },
+          "400": {
+            "description": "Contato já foi cadastrado"
+          }
+        }
+      }
+    },
+    "/contacts/listAllContacts": {
+      "get": {
+        "tags": ["Contact"],
+        "summary": "List all Contacts",
+        "description": "List all Contacts",
+        "parameters": [
+          {
+            "name": "bearer-access-token",
+            "in": "header",
+            "required": true
+          }
+        ],
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "nome": {
+                        "type": "string"
+                      },
+                      "celular": {
+                        "type": "string"
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/contacts/deleteContact/{id}": {
+      "get": {
+        "tags": ["Contact"],
+        "summary": "Delete contact by id",
+        "description": "Delete contact by id",
+        "parameters": [
+          {
+            "name": "bearer-access-token",
+            "in": "header",
+            "required": true
+          }
+        ],
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          },
+          "400": {
+            "description": "Contato não existe"
+          }
+        }
+      }
+    },
+    "/contacts/getById/{id}": {
+      "get": {
+        "tags": ["Contact"],
+        "summary": "Get contact by id",
+        "description": "Get contact by id",
+        "parameters": [
+          {
+            "name": "bearer-access-token",
+            "in": "header",
+            "required": true
+          }
+        ],
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          },
+          "400": {
+            "description": "Por favor, informe o id!"
+          }
+        }
+      }
+    }
+  }
+}

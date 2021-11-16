@@ -1,0 +1,238 @@
+{
+  "_type": "export",
+  "__export_format": 4,
+  "__export_date": "2021-11-16T09:51:48.141Z",
+  "__export_source": "insomnia.desktop.app:v2021.6.0",
+  "resources": [
+    {
+      "_id": "req_8b0f44b0f00e4000adad1c552809b7b6",
+      "parentId": "fld_0b563b16b0b24c87af00a6935f94e58c",
+      "modified": 1637035029792,
+      "created": 1637031307078,
+      "url": "{{ _.baseUrl }}/token",
+      "name": "Generate Token",
+      "description": "",
+      "method": "POST",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n\t\"client\": \"CLIENTE_VAREJAO\"\n}"
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json",
+          "id": "pair_8d11ce9e33ea4b6ea452ed36d0521920"
+        }
+      ],
+      "authentication": {
+        "type": "basic",
+        "useISO88591": false,
+        "disabled": false,
+        "username": "",
+        "password": ""
+      },
+      "metaSortKey": -1637031307078,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "fld_0b563b16b0b24c87af00a6935f94e58c",
+      "parentId": "wrk_0ee5b8c654234882978ba7460e7c2ad3",
+      "modified": 1637031293492,
+      "created": 1637031293492,
+      "name": "Token",
+      "description": "",
+      "environment": {},
+      "environmentPropertyOrder": null,
+      "metaSortKey": -1637031293492,
+      "_type": "request_group"
+    },
+    {
+      "_id": "wrk_0ee5b8c654234882978ba7460e7c2ad3",
+      "parentId": null,
+      "modified": 1636986766584,
+      "created": 1636986766584,
+      "name": "api-integration-v1",
+      "description": "",
+      "scope": "collection",
+      "_type": "workspace"
+    },
+    {
+      "_id": "req_bf17cf76669347958d287456c3e666d3",
+      "parentId": "fld_e68e59a7db8846a986cc73d08e0bad3b",
+      "modified": 1637039552804,
+      "created": 1637037019725,
+      "url": "{{ _.baseUrl }}/contacts/getById/",
+      "name": "getById",
+      "description": "",
+      "method": "GET",
+      "body": {},
+      "parameters": [],
+      "headers": [],
+      "authentication": {
+        "type": "bearer",
+        "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE2MzcwMzQ0NjgsImV4cCI6MTYzNzEyMDg2OCwic3ViIjoiQ0xJRU5URV9WQVJFSkFPIn0.64dnk9qtV_RJolIWFC4rZh6d2rDY5XCSPDdaTNOSwwI"
+      },
+      "metaSortKey": -1637037019725,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "fld_e68e59a7db8846a986cc73d08e0bad3b",
+      "parentId": "wrk_0ee5b8c654234882978ba7460e7c2ad3",
+      "modified": 1636998738218,
+      "created": 1636998738218,
+      "name": "Contacts",
+      "description": "",
+      "environment": {},
+      "environmentPropertyOrder": null,
+      "metaSortKey": -1636998738218,
+      "_type": "request_group"
+    },
+    {
+      "_id": "req_9116085a16574cd7b41957305d3aef1d",
+      "parentId": "fld_e68e59a7db8846a986cc73d08e0bad3b",
+      "modified": 1637039549204,
+      "created": 1637036503011,
+      "url": "{{ _.baseUrl }}/contacts/deleteContact/",
+      "name": "Delete Contato",
+      "description": "",
+      "method": "GET",
+      "body": {},
+      "parameters": [],
+      "headers": [],
+      "authentication": {
+        "type": "bearer",
+        "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE2MzcwMzQ0NjgsImV4cCI6MTYzNzEyMDg2OCwic3ViIjoiQ0xJRU5URV9WQVJFSkFPIn0.64dnk9qtV_RJolIWFC4rZh6d2rDY5XCSPDdaTNOSwwI"
+      },
+      "metaSortKey": -1637036503011,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_4bc01733e0d947b9bd3954ddea08e412",
+      "parentId": "fld_e68e59a7db8846a986cc73d08e0bad3b",
+      "modified": 1637039542365,
+      "created": 1636986799211,
+      "url": "{{ _.baseUrl }}/contacts/createContact",
+      "name": "Create",
+      "description": "",
+      "method": "POST",
+      "body": { "mimeType": "application/json", "text": "" },
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json",
+          "id": "pair_c0a395db345342edafe335209ca3ba42"
+        }
+      ],
+      "authentication": {
+        "type": "bearer",
+        "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE2MzcwMzQ0NjgsImV4cCI6MTYzNzEyMDg2OCwic3ViIjoiQ0xJRU5URV9WQVJFSkFPIn0.64dnk9qtV_RJolIWFC4rZh6d2rDY5XCSPDdaTNOSwwI"
+      },
+      "metaSortKey": -1636994485237,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_76130a6026a64c50bbd2ba750da81112",
+      "parentId": "fld_e68e59a7db8846a986cc73d08e0bad3b",
+      "modified": 1637039543956,
+      "created": 1636994485151,
+      "url": "{{ _.baseUrl }}/contacts/listAllContacts",
+      "name": "Listar contatos",
+      "description": "",
+      "method": "GET",
+      "body": {},
+      "parameters": [],
+      "headers": [],
+      "authentication": { "type": "bearer", "token": "{{ _.tokem }}" },
+      "metaSortKey": -1636994485187,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "env_c8e36c14c6582d8656d46b712afbf207fbe96787",
+      "parentId": "wrk_0ee5b8c654234882978ba7460e7c2ad3",
+      "modified": 1637034673315,
+      "created": 1636986766586,
+      "name": "Base Environment",
+      "data": {
+        "baseUrl": "http://localhost:3333",
+        "tokem": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE2MzcwMzQ0NjgsImV4cCI6MTYzNzEyMDg2OCwic3ViIjoiQ0xJRU5URV9WQVJFSkFPIn0.64dnk9qtV_RJolIWFC4rZh6d2rDY5XCSPDdaTNOSwwI"
+      },
+      "dataPropertyOrder": { "&": ["baseUrl", "tokem"] },
+      "color": null,
+      "isPrivate": false,
+      "metaSortKey": 1636986766586,
+      "_type": "environment"
+    },
+    {
+      "_id": "jar_c8e36c14c6582d8656d46b712afbf207fbe96787",
+      "parentId": "wrk_0ee5b8c654234882978ba7460e7c2ad3",
+      "modified": 1636986766587,
+      "created": 1636986766587,
+      "name": "Default Jar",
+      "cookies": [],
+      "_type": "cookie_jar"
+    },
+    {
+      "_id": "spc_827d9dc5767048f9b581a4ca18ea524c",
+      "parentId": "wrk_0ee5b8c654234882978ba7460e7c2ad3",
+      "modified": 1636986766585,
+      "created": 1636986766585,
+      "fileName": "api-integration-v1",
+      "contents": "",
+      "contentType": "yaml",
+      "_type": "api_spec"
+    },
+    {
+      "_id": "env_441e434c43524dedafe5073bb9c5f1ab",
+      "parentId": "env_c8e36c14c6582d8656d46b712afbf207fbe96787",
+      "modified": 1637036531791,
+      "created": 1637034669940,
+      "name": "Principal",
+      "data": {
+        "baseUrl": "http://localhost:3333",
+        "tokem": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE2MzcwMzQ0NjgsImV4cCI6MTYzNzEyMDg2OCwic3ViIjoiQ0xJRU5URV9WQVJFSkFPIn0.64dnk9qtV_RJolIWFC4rZh6d2rDY5XCSPDdaTNOSwwI"
+      },
+      "dataPropertyOrder": { "&": ["baseUrl", "tokem"] },
+      "color": null,
+      "isPrivate": false,
+      "metaSortKey": 1637034669940,
+      "_type": "environment"
+    }
+  ]
+}

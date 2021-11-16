@@ -1,0 +1,13 @@
+{
+  "type": "postgres",
+  "host": "localhost",
+  "port": 5432,
+  "username": "admin",
+  "password": "admin",
+  "database": "varejao-contacts",
+  "migrations": ["./src/database/migrations/*.js"],
+  "entities": ["./src/modules/contacts/entities/*.ts"],
+  "cli": {
+    "migrationsDir": ["./src/database/migrations"]
+  }
+}

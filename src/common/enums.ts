@@ -1,0 +1,4 @@
+export enum ClientType {
+  CLIENTE_VAREJAO = "CLIENTE_VAREJAO",
+  CLIENTE_MACAPA = "CLIENTE_MACAPA",
+}
